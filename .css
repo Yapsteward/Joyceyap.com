@@ -3897,11 +3897,11 @@ nav a.active {
   -webkit-backdrop-filter: blur(14px);
 }
 
-/* Horizontal Row for Contact Channels */
+/* Horizontal Row for Contact Channels (4 Columns Compact) */
 .contact-channels-horizontal {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
   width: 100%;
   margin-bottom: 24px;
 }
@@ -4178,77 +4178,127 @@ nav a.active {
   gap: 18px;
 }
 
-/* White Box Styling for GitHub, FB, Gmail, LinkedIn */
+/* Transparent Navy Blue Card Styling for Contact Channels */
 .contact-info-item {
   display: flex;
   align-items: center;
-  gap: 18px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1.5px solid rgba(255, 255, 255, 1);
+  gap: 12px;
+  background: rgba(12, 21, 46, 0.78);
+  border: 1.5px solid rgba(146, 209, 79, 0.28);
   border-radius: var(--radius-md);
-  padding: 18px 22px;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25), 0 0 25px rgba(255, 255, 255, 0.2);
+  padding: 12px 14px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(146, 209, 79, 0.05);
   transition: transform 0.35s var(--spring-bounce), border-color 0.3s, box-shadow 0.35s, background 0.3s;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .contact-info-item:hover {
-  transform: translateY(-4px) scale(1.02);
-  border-color: #0533ff;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3), 0 0 30px rgba(5, 51, 255, 0.2);
-  background: #ffffff;
+  transform: translateY(-3px);
+  border-color: var(--lime);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45), 0 0 24px rgba(146, 209, 79, 0.2);
+  background: rgba(18, 30, 64, 0.9);
 }
 
-/* Image Icon Box on White */
+/* Reduced size icon box with transparent navy / green styling */
 .contact-icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: #f1f5f9;
-  border: 1.5px solid rgba(12, 24, 58, 0.12);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(146, 209, 79, 0.12);
+  border: 1px solid rgba(146, 209, 79, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .contact-info-item:hover .contact-icon-box {
   transform: scale(1.08);
-  border-color: #0533ff;
-  background: rgba(5, 51, 255, 0.08);
+  border-color: var(--lime);
+  background: rgba(146, 209, 79, 0.2);
 }
 
 .contact-info-icon {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 4px;
+}
+
+.contact-info-fa {
+  font-size: 1.12rem;
+  color: var(--lime);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.contact-info-item:hover .contact-info-fa {
+  transform: scale(1.1);
+}
+
+.contact-info-details {
+  min-width: 0;
+  flex: 1;
 }
 
 .contact-info-item h4 {
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #475569;
-  margin-bottom: 3px;
+  color: var(--lime);
+  margin-bottom: 2px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-info-item a {
-  color: #070d1f;
+  color: #ffffff;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.84rem;
+  line-height: 1.25;
   transition: color 0.2s;
-  word-break: break-all;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .contact-info-item a:hover {
-  color: #0533ff;
+  color: var(--lime);
+  text-shadow: 0 0 10px var(--lime-glow);
+}
+
+.contact-info-val {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-info-sub {
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ==========================================================================
@@ -4891,8 +4941,8 @@ body.nav-locked {
   }
 
   .contact-channels-horizontal {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
@@ -5652,15 +5702,15 @@ body.nav-locked {
   }
 
   .contact-info-item {
-    padding: 14px 16px;
-    gap: 14px;
-    border-radius: 16px;
+    padding: 11px 13px;
+    gap: 10px;
+    border-radius: 12px;
   }
 
   .contact-icon-box {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
   }
 
   .contact-info-icon {
