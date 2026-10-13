@@ -1,0 +1,23 @@
+{
+  "name": "Joyce Yap — Tech Steward Digital AI",
+  "short_name": "Joyce Yap",
+  "description": "Official Portfolio of Joyce Yap — AI Web Developer & Automation Specialist at Tech Steward Digital AI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080c16",
+  "theme_color": "#0d1b3e",
+  "icons": [
+    {
+      "src": "02. Images/Logo TS.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "02. Images/Logo TS.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
