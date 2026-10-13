@@ -932,7 +932,7 @@ nav a.active {
 
 
 /* ==========================================================================
-   SECTION 2: ABOUT / SYSTEMS (IMAGE LEFT, GIANT "ABOUT" RIGHT)
+   SECTION 2: ABOUT / SYSTEMS (HEADER TOP CENTER, 2 COLUMNS BELOW)
    ========================================================================== */
 .about-hero-section {
   position: relative;
@@ -940,6 +940,15 @@ nav a.active {
   z-index: 2;
   background: transparent;
   border: none;
+}
+
+.about-hero-header-block {
+  text-align: center;
+  margin: 0 auto 46px;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-hero-container {
@@ -1092,7 +1101,8 @@ nav a.active {
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--white);
-  margin-bottom: 16px;
+  text-align: center;
+  margin: 0 auto 16px;
   background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1104,7 +1114,8 @@ nav a.active {
   font-weight: 600;
   color: var(--lime);
   line-height: 1.45;
-  margin-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 18px;
   letter-spacing: -0.01em;
   text-shadow: 0 0 20px rgba(146, 209, 79, 0.25);
 }
@@ -1115,7 +1126,9 @@ nav a.active {
   font-weight: 500;
   color: #f1f5f9;
   line-height: 1.65;
-  margin-bottom: 16px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 780px;
 }
 
 .about-bold-hook strong,
@@ -1133,7 +1146,7 @@ nav a.active {
    ABOUT: COMPACT 4-PILLAR STACK (INSIDE RIGHT COLUMN)
    ========================================================================== */
 .about-pillars-compact {
-  margin: 18px 0 24px;
+  margin: 0;
   width: 100%;
 }
 
@@ -4943,6 +4956,14 @@ body.nav-locked {
     padding: 28px 0 24px;
   }
 
+  .about-hero-header-block {
+    text-align: center;
+    margin: 0 auto 28px;
+    padding: 0 10px;
+    width: 100%;
+    max-width: 620px;
+  }
+
   .about-hero-container {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -6104,6 +6125,11 @@ body.nav-locked {
   /* About Section Ultra-Compact Alignment & Spacing */
   .about-hero-section {
     padding: 18px 0 20px !important;
+  }
+
+  .about-hero-header-block {
+    margin: 0 auto 20px !important;
+    padding: 0 6px !important;
   }
 
   .about-hero-container {
