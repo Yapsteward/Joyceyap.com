@@ -2093,26 +2093,71 @@ nav a.active {
 }
 
 /* ==========================================================================
-   1ST ROW: THE TECH STEWARD SYSTEM (3-STEP METHOD BANNER)
-   Styled after Images 1 & 2 using Tech Steward branding colors mix.
+   SERVICES HEADER & THE CLICK METHOD WAVE PIPELINE
+   Wave Step Compression System with high-visibility branding colors.
    ========================================================================== */
-.tss-method-banner {
-  display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(0, 2.5fr);
-  gap: clamp(24px, 3.2vw, 48px);
+.highlight-green,
+.highlight-click {
+  color: var(--lime) !important;
+  -webkit-text-fill-color: var(--lime) !important;
+  text-shadow: 0 0 24px var(--lime-glow);
+}
+
+.click-method-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  color: #cbd5e1;
+  text-align: center;
+  margin: 0 auto 12px;
+  font-weight: 500;
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.click-method-acronym {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  gap: 10px 22px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.click-acronym-item {
+  font-family: var(--font-headline);
+  font-size: clamp(0.96rem, 1.2vw, 1.1rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.highlight-letter {
+  color: var(--lime) !important;
+  font-weight: 900;
+  font-size: 1.25em;
+  margin-right: 1px;
+  text-shadow: 0 0 16px var(--lime-glow);
+}
+
+/* ==========================================================================
+   WAVE STEP COMPRESSION CONTAINER & 5-STEP PIPELINE (C - L - I - C - K)
+   ========================================================================== */
+.click-wave-container {
   background: linear-gradient(135deg, rgba(12, 21, 46, 0.94) 0%, rgba(7, 13, 31, 0.98) 100%);
   border: 1.5px solid rgba(146, 209, 79, 0.32);
   border-radius: 26px;
-  padding: clamp(24px, 3vw, 40px);
+  padding: clamp(24px, 3vw, 36px) clamp(16px, 2vw, 28px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 35px rgba(146, 209, 79, 0.08);
-  margin-bottom: clamp(30px, 3.5vw, 46px);
+  margin-bottom: clamp(44px, 5.5vw, 64px);
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
 }
 
-.tss-method-banner::before {
+.click-wave-container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -2123,71 +2168,22 @@ nav a.active {
   opacity: 0.85;
 }
 
-/* Left Column: Header & Narrative */
-.tss-method-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-.tss-method-badge {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--lime);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-.tss-method-title {
-  font-family: var(--font-headline);
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
-  font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin: 0 0 10px;
-}
-
-.tss-method-subhead {
-  font-family: var(--font-headline);
-  font-size: clamp(1.15rem, 1.55vw, 1.4rem);
-  font-weight: 700;
-  color: var(--cyan-glow);
-  margin: 0 0 10px;
-  line-height: 1.25;
-}
-
-.tss-method-desc {
-  font-family: var(--font-body);
-  font-size: clamp(0.88rem, 1vw, 0.96rem);
-  color: #cbd5e1;
-  line-height: 1.55;
-  margin: 0;
-}
-
-/* Right Column: 3 Process Step Cards with Connectors */
-.tss-steps-track {
+.click-wave-track {
   display: flex;
   align-items: stretch;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
-.tss-step-card {
+.click-wave-step {
   flex: 1;
   min-width: 0;
-  background: rgba(18, 30, 64, 0.75);
+  background: rgba(18, 30, 64, 0.78);
   border: 1.5px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
-  padding: 22px 18px 20px;
+  padding: 22px 16px 20px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -2198,13 +2194,13 @@ nav a.active {
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-.tss-step-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(146, 209, 79, 0.55);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45), 0 0 20px rgba(146, 209, 79, 0.16);
+.click-wave-step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(146, 209, 79, 0.6);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(146, 209, 79, 0.2);
 }
 
-.tss-step-topbar {
+.click-step-topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2212,34 +2208,42 @@ nav a.active {
   position: relative;
 }
 
-.tss-step-icon-badge {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: rgba(146, 209, 79, 0.12);
-  border: 1px solid rgba(146, 209, 79, 0.38);
-  color: var(--lime);
-  display: flex;
+.click-step-badge {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: rgba(146, 209, 79, 0.14);
+  border: 1.5px solid rgba(146, 209, 79, 0.45);
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
   flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(146, 209, 79, 0.15);
 }
 
-.tss-step-watermark {
+.click-step-letter {
   font-family: var(--font-headline);
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.08);
   line-height: 1;
   position: absolute;
-  top: -4px;
+  top: -6px;
   right: 0;
   user-select: none;
   pointer-events: none;
+  transition: color 0.3s ease;
 }
 
-.tss-step-title {
+.click-wave-step:hover .click-step-letter {
+  color: rgba(146, 209, 79, 0.22);
+}
+
+.click-wave-step .tss-step-title {
   font-family: var(--font-headline);
   font-size: 1.15rem;
   font-weight: 800;
@@ -2248,29 +2252,29 @@ nav a.active {
   letter-spacing: -0.01em;
 }
 
-.tss-step-text {
+.click-step-desc {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.81rem;
   color: #cbd5e1;
-  line-height: 1.5;
+  line-height: 1.48;
   margin: 0 0 14px;
   flex-grow: 1;
 }
 
-.tss-step-chips {
+.click-step-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
   margin-top: auto;
 }
 
-.tss-chip {
+.click-chip {
   display: inline-flex;
   align-items: center;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #e2e8f0;
   background: rgba(255, 255, 255, 0.06);
@@ -2278,34 +2282,47 @@ nav a.active {
   transition: all 0.25s ease;
 }
 
-.tss-step-card:hover .tss-chip {
+.click-wave-step:hover .click-chip {
   background: rgba(146, 209, 79, 0.14);
-  border-color: rgba(146, 209, 79, 0.38);
+  border-color: rgba(146, 209, 79, 0.4);
   color: var(--lime);
 }
 
-.tss-connector {
+.click-wave-connector {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
+  width: 14px;
   flex-shrink: 0;
   position: relative;
 }
 
-.tss-connector-line {
+.click-connector-line {
   flex: 1;
   height: 0;
-  border-top: 1.5px dashed rgba(146, 209, 79, 0.45);
+  border-top: 1.5px dashed rgba(146, 209, 79, 0.5);
 }
 
-.tss-connector-dot {
-  width: 7px;
-  height: 7px;
+.click-connector-dot {
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--lime);
   box-shadow: 0 0 8px var(--lime);
   flex-shrink: 0;
+}
+
+/* Services Heading Divider (What I CAN DO FOR YOU) */
+.services-heading-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.services-heading-divider .sec-title {
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
@@ -2392,18 +2409,18 @@ nav a.active {
   display: inline-flex;
   align-items: center;
   padding: 4px 10px;
-  background: #fff3ea;
-  border: 1.5px solid #fed7aa;
+  background: rgba(146, 209, 79, 0.09);
+  border: 1.5px solid rgba(146, 209, 79, 0.42);
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
   font-size: 0.66rem;
   font-weight: 800;
-  color: #c2410c;
+  color: #15803d;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   width: fit-content;
   margin-bottom: 16px;
-  box-shadow: 0 1px 3px rgba(194, 65, 12, 0.08);
+  box-shadow: 0 1px 3px rgba(34, 197, 94, 0.08);
 }
 
 .svc-portrait-checklist {
@@ -2427,7 +2444,7 @@ nav a.active {
 }
 
 .svc-portrait-check {
-  color: #ea580c;
+  color: #16a34a;
   font-size: 0.92rem;
   margin-top: 1px;
   flex-shrink: 0;
@@ -2454,17 +2471,23 @@ nav a.active {
   }
 }
 
+@media (max-width: 1080px) {
+  .click-wave-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .click-wave-connector {
+    display: none;
+  }
+}
+
 @media (max-width: 960px) {
-  .tss-method-banner {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    padding: 24px 20px;
+  .click-wave-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
-  .tss-steps-track {
-    flex-direction: column;
-    gap: 14px;
-  }
-  .tss-connector {
+  .click-wave-connector {
     display: none;
   }
   .svc-portrait-grid {
@@ -2482,14 +2505,18 @@ nav a.active {
     padding-left: 8px !important;
     padding-right: 8px !important;
   }
-  .tss-method-banner {
-    padding: 20px 15px;
+  .click-wave-container {
+    padding: 18px 12px;
     border-radius: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
-  .tss-step-card {
-    padding: 18px 14px;
+  .click-wave-step {
+    padding: 16px 14px;
     border-radius: 16px;
+  }
+  .click-wave-track {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
   .svc-portrait-grid {
     grid-template-columns: 1fr;
