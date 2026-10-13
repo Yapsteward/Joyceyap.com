@@ -4849,11 +4849,21 @@ body.nav-locked {
   .display-hero-inner {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    gap: 0;
   }
 
   .display-headline {
     font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+    margin: 0 auto 14px;
+  }
+
+  .display-subhead {
+    margin: 0 auto 20px;
+  }
+
+  .display-cta-wrap {
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .sec-label {
@@ -4927,21 +4937,90 @@ body.nav-locked {
    ========================================================================== */
 @media (max-width: 900px) {
 
-  /* About Section */
-  .about-hero-container {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    text-align: center;
+  /* About Section Centering & Mobile Alignment */
+  .about-hero-section {
+    padding: 28px 0 24px;
   }
 
-  .about-hero-text-col {
+  .about-hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+    justify-items: center;
     align-items: center;
   }
 
   .about-hero-image-col {
-    max-width: 420px;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-portrait-card {
+    width: 100%;
+    max-width: 360px;
     margin: 0 auto;
   }
+
+  .portrait-badge-pill {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14px;
+    white-space: nowrap;
+  }
+
+  .about-social-strip {
+    justify-content: center;
+    margin: 16px auto 0;
+    width: 100%;
+  }
+
+  .about-hero-text-col {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-tagline-badge {
+    margin: 0 auto 12px;
+    align-self: center;
+  }
+
+  .about-main-heading {
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+
+  .about-subheader {
+    text-align: center;
+    margin: 0 auto 12px;
+  }
+
+  .about-pillars-compact {
+    width: 100%;
+    margin: 14px auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pillars-mini-title {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+
 
   /* Done-For-You Capsules Grid */
   .dfy-capsules-grid {
@@ -5127,8 +5206,8 @@ body.nav-locked {
 
   /* Display Hero Section */
   .display-hero {
-    padding-top: 105px;
-    padding-bottom: 45px;
+    padding-top: 96px;
+    padding-bottom: 16px;
     text-align: center;
   }
 
@@ -5139,6 +5218,7 @@ body.nav-locked {
     justify-content: center;
     text-align: center;
     width: 100%;
+    gap: 0;
   }
 
   /* Centered, Tightly Aligned 3-Card Fan Stack (Rock-Solid Alignment) */
@@ -5199,6 +5279,7 @@ body.nav-locked {
   .display-headline {
     font-size: clamp(1.85rem, 7.5vw, 2.7rem);
     line-height: 1.15;
+    margin: 0 auto 10px;
   }
 
   .display-lead {
@@ -5206,24 +5287,39 @@ body.nav-locked {
     line-height: 1.55;
   }
 
-  /* Sub-headline: Widen and reduce size on mobile */
+  /* Sub-headline: Widen, reduce size, and tighten spacing */
   .display-subhead {
     font-size: 0.92rem;
     line-height: 1.55;
     max-width: 100%;
     width: 100%;
     padding: 0 10px;
-    margin: 0 auto 22px;
+    margin: 0 auto 14px;
   }
 
-  /* About Bold Hook: Widen and reduce size on mobile */
+  /* Glowing Pill CTA Wrap */
+  .display-cta-wrap {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .btn-glowing-pill {
+    padding: 13px 34px;
+    font-size: 0.96rem;
+  }
+
+  /* About Hero Section Spacing & Bold Hook */
+  .about-hero-section {
+    padding: 24px 0 24px;
+  }
+
   .about-bold-hook {
     font-size: 0.92rem;
     line-height: 1.55;
     width: 100%;
     max-width: 100%;
-    margin-bottom: 14px;
-    text-align: left;
+    margin: 0 auto 16px;
+    text-align: center;
   }
 
   .display-cta-group {
@@ -5818,9 +5914,17 @@ body.nav-locked {
     /* Keep header compact on small screens */
   }
 
-  .display-headline {
-    font-size: 1.8rem;
+  .display-hero {
+    padding-top: 86px !important;
+    padding-bottom: 14px !important;
   }
+
+  .display-headline {
+    font-size: 1.72rem !important;
+    line-height: 1.12 !important;
+    margin: 0 auto 8px !important;
+  }
+
 
   .hero-image-stack {
     width: 156px;
@@ -5974,22 +6078,50 @@ body.nav-locked {
     font-size: 1.2rem !important;
   }
 
-  /* Sub-headline: widen and reduce size on ultra-compact phones */
+  /* Sub-headline: widen and tighten spacing on ultra-compact phones */
   .display-subhead {
     font-size: 0.85rem !important;
-    line-height: 1.5 !important;
+    line-height: 1.48 !important;
     max-width: 100% !important;
     width: 100% !important;
     padding: 0 4px !important;
-    margin: 0 auto 18px !important;
+    margin: 0 auto 12px !important;
   }
 
-  /* About Bold Hook: widen and reduce size on ultra-compact phones */
+  /* Glowing Pill CTA Wrap Ultra-Compact */
+  .display-cta-wrap {
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .btn-glowing-pill {
+    padding: 12px 28px !important;
+    font-size: 0.90rem !important;
+  }
+
+  /* About Section Ultra-Compact Alignment & Spacing */
+  .about-hero-section {
+    padding: 18px 0 20px !important;
+  }
+
+  .about-hero-container {
+    gap: 24px !important;
+    padding: 0 14px !important;
+  }
+
   .about-bold-hook {
     font-size: 0.86rem !important;
     line-height: 1.5 !important;
-    margin-bottom: 12px !important;
+    margin: 0 auto 14px !important;
+    text-align: center !important;
   }
+
+  .portrait-badge-pill {
+    bottom: 10px !important;
+    padding: 5px 12px !important;
+    font-size: 0.67rem !important;
+  }
+
 
   /* Collaboration Marquee Ultra-Compact */
   .collab-marquee-wrap {
