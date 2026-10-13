@@ -4434,7 +4434,7 @@ footer,
 
 .footer-orbital-ring-1 {
   position: absolute;
-  inset: -8px;
+  inset: -6px;
   border-radius: 50%;
   border: 1.4px dashed rgba(0, 210, 255, 0.45);
   animation: rotateClockwise 14s linear infinite;
@@ -4478,8 +4478,8 @@ footer,
 }
 
 .footer-logo-shield {
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.16) 0%, rgba(12, 21, 46, 0.92) 75%);
   backdrop-filter: blur(20px);
@@ -4493,7 +4493,8 @@ footer,
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 1px;
+  overflow: hidden;
   transition: transform 0.35s ease;
 }
 
@@ -5756,27 +5757,28 @@ body.nav-locked {
   }
 
   .footer-dual-emblems {
-    gap: 24px;
+    gap: 26px;
     margin: 8px auto 16px;
   }
 
   .footer-logo-wrapper {
-    width: 82px;
-    height: 82px;
+    width: 86px;
+    height: 86px;
   }
 
   .footer-logo-shield {
-    width: 60px;
-    height: 60px;
-    padding: 6px;
+    width: 86px;
+    height: 86px;
+    padding: 1px;
+    overflow: hidden;
   }
 
   .footer-orbital-ring-1 {
-    inset: -6px;
+    inset: -5px;
   }
 
   .footer-orbital-ring-2 {
-    inset: -12px;
+    inset: -14px;
   }
 
   .footer-orbital-node {
@@ -6159,27 +6161,28 @@ body.nav-locked {
   }
 
   .footer-dual-emblems {
-    gap: 18px !important;
+    gap: 22px !important;
     margin: 6px auto 14px !important;
   }
 
   .footer-logo-wrapper {
-    width: 72px !important;
-    height: 72px !important;
+    width: 78px !important;
+    height: 78px !important;
   }
 
   .footer-logo-shield {
-    width: 54px !important;
-    height: 54px !important;
-    padding: 5px !important;
+    width: 78px !important;
+    height: 78px !important;
+    padding: 1px !important;
+    overflow: hidden !important;
   }
 
   .footer-orbital-ring-1 {
-    inset: -5px !important;
+    inset: -4px !important;
   }
 
   .footer-orbital-ring-2 {
-    inset: -10px !important;
+    inset: -12px !important;
   }
 
   .footer-orbital-node {
