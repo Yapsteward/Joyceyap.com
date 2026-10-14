@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry Confirmation — Tech Steward System Specialist</title>
+    <style>
+        /* RESET & BASE */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1e293b;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        /* WRAPPER CONTAINER (PLAIN WHITE BRAND LAYOUT) */
+        .email-container {
+            max-width: 620px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* TOP ACCENT BAR */
+        .top-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #92d14f 0%, #00d2ff 50%, #0533ff 100%);
+            width: 100%;
+        }
+
+        /* BODY */
+        .email-body {
+            padding: 36px 32px 28px;
+        }
+
+        .greeting {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 14px;
+            letter-spacing: -0.3px;
+        }
+
+        .intro-p {
+            font-size: 15px;
+            line-height: 1.68;
+            color: #334155;
+            margin: 0 0 26px;
+        }
+
+        .intro-p strong {
+            color: #0f172a;
+        }
+
+        /* CALENDLY NEXT STEP HERO BOX */
+        .calendly-hero-box {
+            background: #f8fafc;
+            border: 1.5px solid #0284c7;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 28px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(2, 132, 199, 0.08);
+        }
+
+        .calendly-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            border: 1px solid #7dd3fc;
+            color: #0369a1;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .calendly-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 10px;
+        }
+
+        .calendly-desc {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+
+        .calendly-desc strong {
+            color: #0f172a;
+        }
+
+        .btn-calendly-action {
+            display: inline-block;
+            background: #84cc16;
+            color: #0f172a !important;
+            font-weight: 800;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 8px;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 14px rgba(132, 204, 22, 0.35);
+        }
+
+        /* SUBMISSION DETAILS SUMMARY CARD */
+        .summary-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .summary-header {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0284c7;
+            font-weight: 800;
+            margin-bottom: 14px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .summary-table td {
+            padding: 10px 6px;
+            font-size: 14px;
+            vertical-align: top;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .summary-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .summary-label {
+            width: 38%;
+            color: #64748b;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.6px;
+        }
+
+        .summary-val {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .summary-quote {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 3px solid #84cc16;
+            padding: 12px 14px;
+            border-radius: 6px;
+            color: #1e293b;
+            font-size: 13.8px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            margin-top: 4px;
+        }
+
+        /* QUICK CONTACT BLOCK */
+        .chat-cta-block {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 22px 20px;
+            text-align: center;
+            margin: 26px 0 10px;
+        }
+
+        .chat-cta-text {
+            font-size: 13.5px;
+            color: #475569;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+
+        .btn-action {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 800;
+            text-decoration: none;
+            margin: 4px 6px;
+        }
+
+        .btn-primary {
+            background: #22c55e;
+            color: #ffffff !important;
+            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
+        }
+
+        .btn-secondary {
+            background: #0284c7;
+            color: #ffffff !important;
+            box-shadow: 0 2px 8px rgba(2, 132, 199, 0.25);
+        }
+
+        /* FOOTER */
+        .email-footer {
+            padding: 24px 30px 28px;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .portfolio-link-banner {
+            display: inline-block;
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            padding: 9px 22px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #0284c7;
+            text-decoration: none;
+            margin-top: 4px;
+        }
+
+        .portfolio-link-banner:hover {
+            border-color: #0284c7;
+            color: #0369a1;
+        }
+
+        .copyright {
+            font-size: 11.5px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-top: 16px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                border-radius: 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .email-body,
+            .email-footer {
+                padding: 22px 18px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+        style="background-color: #ffffff; padding: 24px 10px;">
+        <tr>
+            <td align="center">
+                <div class="email-container">
+                    <!-- TOP ACCENT BAR -->
+                    <div class="top-bar"></div>
+
+                    <!-- BODY -->
+                    <div class="email-body">
+                        <div class="greeting">Hi
+                            <?= name ?>,
+                        </div>
+                        <p class="intro-p">
+                            Thank you for reaching out and sharing your business goals with <strong>Tech Steward System
+                                Specialist</strong>.
+                            Your project inquiry has been received directly by <strong>Joyce Yap</strong>.
+                        </p>
+
+                        <!-- NEXT STEP: CALENDLY DISCOVERY EMBED LINK -->
+                        <div class="calendly-hero-box">
+                            <div class="calendly-badge">✦ Step 2: Discovery Call</div>
+                            <div class="calendly-title">Schedule Your Free Discovery Meeting</div>
+                            <div class="calendly-desc">
+                                If you haven’t reserved your spot yet, choose an available time for a 30-minute
+                                <strong>Free Discovery Call</strong> so we can discuss your business needs and
+                                options.<br><br>
+                                <span style="color: #64748b; font-size: 12.5px;">Note: If you’re based in the
+                                    Philippines, expect a brief reminder call prior to the meeting.</span>
+                            </div>
+                            <a href="<?= calendlyUrl ?>" class="btn-calendly-action" target="_blank">
+                                Open Discovery Meeting Calendar &rarr;
+                            </a>
+                        </div>
+
+                        <!-- SUBMISSION SUMMARY CARD -->
+                        <div class="summary-card">
+                            <div class="summary-header">Summary of Your Submitted Information</div>
+                            <table class="summary-table">
+                                <tr>
+                                    <td class="summary-label">Business Name</td>
+                                    <td class="summary-val"><strong>
+                                            <?= businessName || 'Not specified' ?>
+                                        </strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="summary-label">Industry</td>
+                                    <td class="summary-val">
+                                        <?= businessIndustry || 'Not specified' ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="summary-label">Service Needed</td>
+                                    <td class="summary-val" style="color: #0284c7; font-weight: 700;">
+                                        <?= serviceNeeded ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="summary-label">Budget Range</td>
+                                    <td class="summary-val" style="color: #16a34a; font-weight: 700;">
+                                        <?= budget ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="summary-label">Challenges in Business</td>
+                                    <td class="summary-val">
+                                        <?= challenges || 'Not specified' ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="summary-label">Project Details</td>
+                                    <td class="summary-val">
+                                        <div class="summary-quote">
+                                            <?= message ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="summary-label">Submitted On</td>
+                                    <td class="summary-val" style="font-size: 12.5px; color: #64748b;">
+                                        <?= timestamp ?>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- QUICK MESSAGING ACTIONS -->
+                        <div class="chat-cta-block">
+                            <div class="chat-cta-text">Have immediate questions or need to connect right away? Reach out
+                                directly:</div>
+                            <a href="https://wa.me/639557049350?text=Hi%20Joyce!%20I%20just%20submitted%20an%20inquiry%20via%20your%20portfolio."
+                                class="btn-action btn-primary" target="_blank">Chat on WhatsApp &rarr;</a>
+                            <a href="https://m.me/joyceanngonzalesyap" class="btn-action btn-secondary"
+                                target="_blank">Message on Facebook &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER & PORTFOLIO LINK -->
+                    <div class="email-footer">
+                        <a href="https://joyceyap.com" class="portfolio-link-banner" target="_blank">
+                            View Full Portfolio at joyceyap.com &rarr;
+                        </a>
+
+                        <div class="copyright">
+                            &copy; 2026 Tech Steward System Specialist. Entrusted with Skill &bull; Engineered for
+                            Growth.<br>
+                            <a href="mailto:joyceannyap8@gmail.com"
+                                style="color: #64748b; text-decoration: none;">joyceannyap8@gmail.com</a> &bull;
+                            <a href="https://www.linkedin.com/in/joyceannyap"
+                                style="color: #64748b; text-decoration: none;" target="_blank">LinkedIn Profile</a>
+                            &bull;
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
